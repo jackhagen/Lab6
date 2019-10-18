@@ -1,8 +1,5 @@
 package co.grandcircus;
 
-//@author Jack Hagen
-
-import java.util.Random;
 import java.util.Scanner;
 
 public class Lab6 {
@@ -51,12 +48,12 @@ public class Lab6 {
 
 		return (int) Math.ceil(Math.random() * numSides);
 	}
-
-	public static int generateRandomDiceRoll2(int numSides) {
-
-		Random r = new Random();
-		return r.nextInt(numSides);
-	}
+//
+//	public static int generateRandomDiceRoll2(int numSides) {
+//
+//		Random r = new Random();
+//		return r.nextInt(numSides);
+//	}
 
 }
 
