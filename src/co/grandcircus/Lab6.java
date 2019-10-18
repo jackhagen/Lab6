@@ -1,5 +1,7 @@
 package co.grandcircus;
 
+//@author Jack Hagen
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -14,7 +16,7 @@ public class Lab6 {
 		String userChar = scnr.nextLine();
 		int numRolls = 1;
 
-		System.out.println("Press any key to roll: ");
+		System.out.println("Press any key to roll. Good luck!");
 		userChar = scnr.nextLine();
 
 		System.out.println("Roll " + numRolls + ":");
@@ -24,28 +26,22 @@ public class Lab6 {
 		System.out.println();
 		System.out.println("Do you want to roll again? (y/n)");
 		userChar = scnr.nextLine();
-		numRolls = numRolls + 1;
-
-		System.out.println("Roll " + numRolls + ":");
-		System.out.println(generateRandomDiceRoll(dieSides1));
-		System.out.println(generateRandomDiceRoll(dieSides1));
 
 		while (userChar.equalsIgnoreCase("y") || userChar.equalsIgnoreCase("Yes")) {
 
-			System.out.println();
-			System.out.println("Do you want to roll again? (y/n)");
-			userChar = scnr.nextLine();
 			numRolls = numRolls + 1;
-
 			System.out.println("Roll " + numRolls + ":");
 			System.out.println(generateRandomDiceRoll(dieSides1));
 			System.out.println(generateRandomDiceRoll(dieSides1));
+			System.out.println();
+			System.out.println("Do you want to roll again? (y/n)");
+			System.out.println();
+			userChar = scnr.nextLine();
+		}
 
-			while (userChar.equalsIgnoreCase("n") || userChar.equalsIgnoreCase("No")) {
-				System.out.println("Thanks for playing!");
-				break;
-			}
-
+		while (userChar.equalsIgnoreCase("n") || userChar.equalsIgnoreCase("No")) {
+			System.out.println("Thanks for playing!");
+			break;
 		}
 
 		scnr.close();
@@ -63,3 +59,5 @@ public class Lab6 {
 	}
 
 }
+
+//double randNum = Math.random() * dieSide
